@@ -1,0 +1,1 @@
+// src/lib/authentication/model/user.js
