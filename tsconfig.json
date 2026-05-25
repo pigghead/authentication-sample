@@ -20,7 +20,7 @@
       }
     ],
     "paths": {
-      "@/components/*": ["app/components/*"],
+      "@/components/*": ["src/app/components/*"],
       "@/*": ["src/*"],
     }
   },

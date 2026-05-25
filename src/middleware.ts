@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import User from '@/models/user';
 import jsonwebtoken from 'jsonwebtoken';
 
-const { verify } = jsonwebtoken;
+//const { verify } = jsonwebtoken;
 
 export function middleware(req: NextRequest) {
     try {
@@ -21,7 +21,7 @@ export function middleware(req: NextRequest) {
         // extract the token from the format 'Bearer <token>'
         const token = authHeader.split(' ')[1];
         
-        const decoded = verify(token, 'shhh');
+        //const decoded = verify(token, 'shhh');
 
         return NextResponse.next();
     } catch (err) {
@@ -42,7 +42,6 @@ export function middleware(req: NextRequest) {
 export const config = {
     matcher: ['/profile/:path*', 'dashboard/:path*']
 }
-
 
 /*
     Summary: In the context of Next.js, this file sits directly at the root, next to the app folder. Next.js automatically runs this file on every request,
