@@ -5,7 +5,7 @@ import jsonwebtoken from 'jsonwebtoken';
 
 //const { verify } = jsonwebtoken;
 
-export function middleware(req: NextRequest) {
+export function proxy(req: NextRequest) {
     try {
         // get authorization header from the request
         const authHeader = req.headers.get('authorization');
@@ -40,7 +40,7 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
-    matcher: ['/profile/:path*', 'dashboard/:path*']
+    matcher: ['/profile/:path*', '/dashboard/:path*']
 }
 
 /*
